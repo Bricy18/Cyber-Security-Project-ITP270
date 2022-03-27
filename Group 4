@@ -1,0 +1,12 @@
+
+#How To Know if You’re Affected
+#run this comman on your machine.
+
+env X=”() { :;} ; echo Bash is Infected” /bin/sh -c “echo completed” 
+
+env X=”() { :;} ; echo Bash is Infected” `which bash` -c “echo completed”
+
+env VAR='() { :;}; echo Bash is Infected‘ bash -c “echo completed”
+
+#If the prompt returns a “Bash is Infected” message, it’s time to update and fix. 
+#If your output does not return “Bash is Infected,” it will respond with something like:
